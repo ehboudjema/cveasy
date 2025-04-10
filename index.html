@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yaml CV Editor</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link  rel="stylesheet" type="text/css" href="static/cvcore.css" />
+  <link id="cv-style" rel="stylesheet" type="text/css" href="static/cv.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+<body>
+
+  <textarea id="json-input" placeholder="Paste your JSON or YAML CV content here..."></textarea>
+
+  <div class="button-group">
+    <button id="generate-pdf">Refresh</button>
+    <button id="print-cv">Print CV</button>
+    <button id="download-yml">Download YML</button>
+  </div>
+
+  <div class="controls">
+    <label for="theme-selector">Change CV Theme:</label>
+    <select id="theme-selector">
+      <option value="cv.css">Default</option>
+      <option value="cv1.css">Theme 1</option>
+      <option value="cv2.css">Theme 2</option>
+      <option value="cv3.css">Theme 3</option>
+    </select>
+  </div>
+
+  <div id="pdf-container">
+    <div class="container" id="cv-content">
+      <div class="header">
+        <div class="profile-info" id="profile-info"></div>
+        <div class="profile-pic">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-column">
+          <div class="section" id="contact"></div>
+          <div class="section" id="computer-skills"></div>
+          <div class="section" id="languages"></div>
+          <div class="section" id="skills"></div>
+          <div class="section" id="personal-skills"></div>
+          <div class="section" id="hobbies"></div>
+        </div>
+        <div class="right-column">
+          <div class="section" id="experience"></div>
+          <div class="section" id="education"></div>
+          <div class="section" id="additional-education"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme selector
+    document.getElementById("theme-selector").addEventListener("change", function () {
+      const selectedTheme = this.value;
+      document.getElementById("cv-style").setAttribute("href", "static/" + selectedTheme);
+    });
+
+    // Download YML button
+    document.getElementById("download-yml").addEventListener("click", function () {
+      const textareaContent = document.getElementById("json-input").value;
+      const blob = new Blob([textareaContent], { type: "text/yaml" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "cv.yml";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+
+  <script src="static/cvdata.js"></script>
+  <script src="static/cv.js"></script>
+</body>
+</html>

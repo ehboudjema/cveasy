@@ -1,0 +1,234 @@
+        /* ... (Your existing CSS styles) ... */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+            --light-text: #777;
+        }
+
+
+        .profile-info {
+            flex: 2;
+        }
+
+        .profile-pic {
+            width: 80px; /* Reduced profile pic size */
+            height: 80px; /* Reduced profile pic size */
+            border-radius: 50%;
+            background-color: var(--light-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px; /* Reduced margin */
+            flex: 0 0 auto;
+            font-size: 30px; /* Reduced font size */
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 16pt; /* Reduced heading size */
+            margin-bottom: 3px; /* Reduced margin */
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 9pt; /* Reduced tagline size */
+            font-weight: 300;
+            margin-bottom: 3px; /* Reduced margin */
+            color: var(--light-color);
+        }
+
+        .content {
+            display: flex;
+            padding: 10px; /* Reduced content padding */
+            height: calc(297mm - 110px); /* Adjusted content height */
+        }
+
+        .left-column {
+            flex: 0 0 33%; /* Fixed width for left column */
+            padding-right: 10px; /* Reduced padding */
+            border-right: 1px solid #eee;
+        }
+
+        .right-column {
+            flex: 0 0 66%; /* Fixed width for right column */
+            padding-left: 10px; /* Reduced padding */
+        }
+
+        .section {
+            margin-bottom: 10px; /* Reduced section margin */
+        }
+
+        .section-title {
+            color: var(--secondary-color);
+            font-size: 22pt !important; /* Reduced section title size */
+            margin-bottom: 6px; /* Reduced margin */
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .section-title i {
+            margin-right: 6px; /* Reduced margin */
+            width: 18px; /* Reduced icon size */
+            text-align: center;
+            color: var(--accent-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px; /* Reduced margin */
+        }
+
+        .contact-item i {
+            width: 16px; /* Reduced icon size */
+            margin-right: 6px; /* Reduced margin */
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .skills-item {
+            margin-bottom: 4px; /* Reduced margin */
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1px; /* Reduced margin */
+            font-size: 8pt; /* Reduced skill name size */
+        }
+
+        .skill-bar {
+            height: 4px; /* Reduced skill bar height */
+            background-color: #eee;
+            border-radius: 2px; /* Reduced border radius */
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+
+        .language-item {
+            margin-bottom: 4px; /* Reduced margin */
+        }
+
+        .language-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1px; /* Reduced margin */
+            font-size: 8pt; /* Reduced language name size */
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 8px; /* Reduced margin */
+            position: relative;
+        }
+
+        .year {
+            color: var(--light-text);
+            font-size: 8pt; /* Reduced year size */
+            margin-bottom: 1px; /* Reduced margin */
+            font-weight: 500;
+        }
+
+        .job-title, .degree {
+            font-weight: 400;
+            font-size: 10pt; /* Reduced job title/degree size */
+            margin-bottom: 1px; /* Reduced margin */
+        }
+
+        .company, .school {
+            color: var(--secondary-color);
+            margin-bottom: 2px; /* Reduced margin */
+            font-weight: 500;
+            font-size: 9pt; /* Reduced company/school size */
+        }
+
+        .description {
+            font-size: 8pt; /* Reduced description size */
+            color: var(--light-text);
+        }
+
+        .footer {
+            background-color: var(--primary-color) !important; /* Added !important */
+            color: white;
+            text-align: center;
+            padding: 6px; /* Reduced footer padding */
+            font-size: 7pt; /* Reduced footer size */
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            print-color-adjust: exact; /* Forces color printing */
+            -webkit-print-color-adjust: exact; /* For Safari */
+        }
+
+        /* Additional for bubbles */
+        .bubble-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px; /* Reduced gap */
+            margin-top: 3px; /* Reduced margin */
+        }
+
+        .bubble {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            border-radius: 10px; /* Reduced border radius */
+            padding: 1px 6px; /* Reduced padding */
+            font-size: 8pt; /* Reduced bubble size */
+            display: inline-block;
+        }
+
+        /* Soft skills styles */
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px; /* Reduced gap */
+        }
+
+        .soft-skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px; /* Reduced margin */
+            width: 100%;
+            font-size: 9pt; /* Reduced soft skill size */
+        }
+
+        .soft-skill-item i {
+            margin-right: 4px; /* Reduced margin */
+            color: var(--secondary-color);
+            width: 10px; /* Reduced icon size */
+            text-align: center;
+            font-size: 8pt; /* Reduced icon size */
+        }
+
+        /* Hobbies styles */
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px; /* Reduced gap */
+        }
+
+        .hobby-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px; /* Reduced margin */
+            width: 47%;
+            font-size: 9pt; /* Reduced hobby size */
+        }
+
+        .hobby-item i {
+            margin-right: 4px; /* Reduced margin */
+            color: var(--secondary-color);
+            width: 10px; /* Reduced icon size */
+            text-align: center;
+            font-size: 8pt; /* Reduced icon size */
+        }
+
+
+

@@ -1,0 +1,272 @@
+:root {
+	--primary-color: #333;
+	--secondary-color: #666;
+	--background-color: #fff;
+	--border-color: #ddd;
+	--section-title-color: #222;
+	font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+  }
+  
+  body {
+	margin: 0;
+	padding: 8px; /* Slightly reduced padding */
+	background-color: var(--background-color);
+	color: #333;
+	line-height: 1.2; /* Slightly reduced line height */
+	font-size: 9px; /* Slightly smaller font size */
+  }
+  
+  .cv-container {
+	max-width: 210mm; /* A4 width */
+	height: 297mm; /* A4 height */
+	margin: 0 auto;
+	background-color: var(--background-color);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+	padding: 12px; /* Slightly reduced padding */
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr; /* Single column layout */
+	grid-template-rows: auto auto 1fr auto auto auto; /* Define row structure */
+	grid-template-areas:
+	  "header"
+	  "personal"
+	  "content"
+	  "skills"
+	  "short"
+	  "languages";
+  }
+  
+  /* Header/Personal Information */
+  .header {
+	grid-area: header;
+	margin-bottom: 10px;
+  }
+  
+  h1 {
+	font-size: 14px; /* Slightly smaller heading */
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0 0 6px 0;
+	color: var(--primary-color);
+  }
+  
+  .personal-info {
+	grid-area: personal;
+	display: flex; /* Use flexbox for a more compact layout */
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 8px;
+  }
+  
+  .personal-info-item {
+	font-size: 9px;
+	margin-bottom: 0; /* Reduced margin */
+  }
+  
+  /* Section Styling */
+  .section {
+	margin-bottom: 10px;
+  }
+  
+  .section-title {
+	font-size: 11px; /* Slightly smaller title */
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	color: var(--section-title-color);
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 2px;
+  }
+  
+  /* Education & Training */
+  .education-section,
+  .training-section,
+  .experience-section {
+	grid-area: content; /* All main content goes here */
+  }
+  
+  .education-item,
+  .training-item,
+  .experience-item {
+	margin-bottom: 6px;
+  }
+  
+  .education-title,
+  .training-title,
+  .experience-title {
+	font-weight: bold;
+	margin-bottom: 1px;
+	font-size: 9px;
+  }
+  
+  .education-location,
+  .training-details,
+  .experience-company {
+	font-size: 9px;
+	color: var(--secondary-color);
+  }
+  
+  .education-year,
+  .training-year,
+  .experience-date,
+  .experience-location {
+	font-style: italic;
+	color: var(--secondary-color);
+	font-size: 9px;
+  }
+  
+  /* Skills */
+  .skills-section {
+	grid-area: skills;
+	margin-bottom: 8px;
+  }
+  
+  .skill-category {
+	margin-bottom: 6px;
+  }
+  
+  .skill-category-title {
+	font-weight: bold;
+	margin-bottom: 2px;
+	font-size: 9px;
+  }
+  
+  .skill-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+	display: flex; /* Compact layout */
+	flex-wrap: wrap;
+	gap: 5px;
+  }
+  
+  .skill-item {
+	font-size: 9px;
+	margin-bottom: 0;
+	padding: 2px 5px;
+	border: 1px solid var(--border-color);
+	border-radius: 3px;
+	background-color: #f9f9f9;
+  }
+  
+  /* Short Section (e.g., Summary, About Me) */
+  .short-section {
+	grid-area: short;
+	margin-bottom: 8px;
+  }
+  
+  .short-section p {
+	font-size: 9px;
+	line-height: 1.2;
+	margin-bottom: 4px;
+  }
+  
+  /* Languages */
+  .languages-section {
+	grid-area: languages;
+  }
+  
+  .language-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2px;
+	font-size: 9px;
+  }
+  
+  .language-name {
+	font-weight: bold;
+  }
+  
+  .language-level {
+	color: var(--secondary-color);
+  }
+  
+  /* For print-specific settings */
+  @media print {
+	body {
+	  padding: 0;
+	  margin: 0;
+	  font-size: 9px;
+	  line-height: 1.2;
+	}
+  
+	.cv-container {
+	  box-shadow: none;
+	  padding: 10mm;
+	  width: 190mm; /* Accounting for margins in printing */
+	  height: 277mm; /* Accounting for margins in printing */
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: auto auto 1fr auto auto auto;
+	  grid-template-areas:
+		"header"
+		"personal"
+		"content"
+		"skills"
+		"short"
+		"languages";
+	}
+  
+	.header {
+	  margin-bottom: 8px;
+	}
+  
+	h1 {
+	  font-size: 14px;
+	  margin-bottom: 5px;
+	}
+  
+	.personal-info {
+	  gap: 6px;
+	  margin-bottom: 6px;
+	}
+  
+	.section {
+	  margin-bottom: 8px;
+	}
+  
+	.section-title {
+	  font-size: 11px;
+	  margin-bottom: 4px;
+	  padding-bottom: 2px;
+	}
+  
+	.education-item,
+	.training-item,
+	.experience-item {
+	  margin-bottom: 5px;
+	}
+  
+	.skills-section {
+	  margin-bottom: 6px;
+	}
+  
+	.skill-list {
+	  gap: 3px;
+	}
+  
+	.skill-item {
+	  padding: 1px 4px;
+	}
+  
+	.short-section {
+	  margin-bottom: 6px;
+	}
+  
+	.short-section p {
+	  margin-bottom: 3px;
+	}
+  
+	.languages-section {
+	  margin-bottom: 0;
+	}
+  
+	.language-item {
+	  margin-bottom: 1px;
+	}
+  
+	@page {
+	  size: A4;
+	  margin: 10mm;
+	}
+  }

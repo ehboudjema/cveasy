@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #333;
+    --accent-color: #555;
+    --light-color: #fff;
+    --text-color: #000;
+    --light-text: #777;
+    font-family: Calibri, sans-serif;
+}
+
+body {
+    /* Font-family inherited from :root */
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px; /* Even smaller padding */
+    display: flex;
+    align-items: center;
+    border-radius: 4px 4px 0 0; /* Even smaller rounded corners */
+    grid-column: 1 / 3;
+}
+
+.profile-pic {
+    width: 65px; /* Even smaller profile picture */
+    height: 65px; /* Even smaller profile picture */
+    border-radius: 50%;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 28px; /* Slightly smaller icon size */
+    margin-right: 10px; /* Even smaller right margin */
+    border: 1px solid var(--primary-color); /* Thinner black border */
+}
+
+h1 {
+    font-size: 16pt; /* Slightly smaller main heading */
+    font-weight: 700;
+    margin-bottom: 2px; /* Even smaller bottom margin */
+}
+.tagline {
+    font-size: 8pt; /* Slightly smaller tagline */
+    font-weight: 300;
+    color: var(--light-color);
+}
+
+.content {
+    padding: 12px 0; /* Even smaller vertical padding */
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.left-column {
+    padding-right: 12px; /* Even smaller right padding */
+    border-right: 1px solid #ccc;
+    width: 30%;
+}
+.right-column {
+    padding-left: 12px; /* Even smaller left padding */
+}
+
+.section {
+    margin-bottom: 16px; /* Even smaller bottom margin */
+}
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.2rem; /* Slightly smaller section title */
+    margin-bottom: 6px; /* Even smaller bottom margin */
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid var(--primary-color); /* Thinner underline */
+    padding-bottom: 3px; /* Even smaller bottom padding */
+}
+.section-title i {
+    margin-right: 6px; /* Even smaller right margin */
+    width: 14px; /* Even smaller icon width */
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Even smaller bottom margin */
+    font-size: 7pt; /* Same small contact item text */
+    color: var(--text-color);
+}
+.contact-item i,
+.soft-skill-item i,
+.hobby-item i {
+    color: var(--accent-color);
+    margin-right: 6px; /* Even smaller right margin */
+    width: 12px; /* Even smaller icon width */
+    text-align: center;
+}
+
+/* Skills */
+.skill-item {
+    margin-bottom: 6px; /* Even smaller bottom margin */
+}
+.skill-label {
+    font-size: 9pt; /* Same small skill label */
+    font-weight: 500;
+    margin-bottom: 1px; /* Even smaller bottom margin */
+    display: block;
+    color: var(--text-color);
+}
+.skill-bar {
+    height: 3.5px; /* Even thinner skill bar */
+    background-color: #ddd;
+    border-radius: 1.2px; /* Even smaller border radius */
+    overflow: hidden;
+}
+.skill-progress {
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 1.2px; /* Even smaller border radius */
+}
+
+/* Lists & Bubbles */
+.bubble {
+    background-color: #eee;
+    color: var(--primary-color);
+    padding: 2px 6px; /* Same small padding */
+    font-size: 6pt; /* Same small bubble text */
+    border-radius: 10px;
+    margin-right: 3px; /* Even smaller right margin */
+    margin-bottom: 3px; /* Even smaller bottom margin */
+    border: 1px solid #ccc;
+}
+
+.soft-skills,
+.bubble-skills,
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /* Even smaller gap */
+}
+
+/* Education & Experience */
+.experience-item,
+.education-item {
+    margin-bottom: 10px; /* Even smaller bottom margin */
+}
+.year {
+    font-size: 8pt; /* Same small year text */
+    font-weight: 500;
+    margin-bottom: 1px; /* Even smaller bottom margin */
+    display: block;
+    color: var(--light-text);
+}
+.job-title, .degree {
+    font-weight: 600;
+    font-size: 10pt; /* Same small job title/degree */
+    margin-bottom: 1px; /* Even smaller bottom margin */
+}
+.company, .school {
+    font-size: 8pt; /* Same small company/school text */
+    font-weight: 500;
+    margin-bottom: 1px; /* Even smaller bottom margin */
+    color: var(--secondary-color);
+}
+.description {
+    font-size: 6pt; /* Same small description text */
+    color: var(--light-text);
+    line-height: 1.15; /* Even tighter line height */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 6px; /* Same small padding */
+    font-size: 6pt; /* Same small footer text */
+    width: 100%;
+    grid-column: 1 / 3;
+    border-radius: 0 0 4px 4px; /* Even smaller rounded bottom corners */
+}
